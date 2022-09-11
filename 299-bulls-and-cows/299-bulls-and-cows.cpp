@@ -19,13 +19,13 @@ public:
             {
                 if (s[i.first]>g[i.first]) y+=g[i.first];
                 else y+=s[i.first];
-                cout<<i.first<<" is cow with a count "<<s[i.first]<<endl;
+                // cout<<i.first<<" is cow with a count "<<s[i.first]<<endl;
             }
             else if (s[i.first]>=1 && g[i.first]>=1 && bulls[i.first]>=1) 
             {
                 if (s[i.first]>g[i.first]) y+=g[i.first]-bulls[i.first];
                 else y+=s[i.first]-bulls[i.first];
-                cout<<i.first<<" is cow with a count "<<i.second-bulls[i.first]<<endl;
+                // cout<<i.first<<" is cow with a count "<<i.second-bulls[i.first]<<endl;
             }
         }
         xs=to_string(x);
