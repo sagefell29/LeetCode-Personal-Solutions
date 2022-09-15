@@ -1,18 +1,5 @@
 class Solution {
 public:
-    string reverseString(string s) {
-        int i=0,j=s.length()-1;
-        while (i<=j)
-        {
-            char temp=s[i];
-            s[i]=s[j];
-            s[j]=temp;
-            i++;
-            j--;
-        }
-        return s;
-    }
-    
     string reverseWords(string s) {
         string ans="";
         string temp="";
@@ -20,13 +7,15 @@ public:
         {
             if (i==' ')
             {
-                ans= ans+reverseString(temp);
+                reverse(temp.begin(),temp.end());
+                ans = ans+temp;
                 ans=ans+" ";
                 temp="";
             }
             else temp+=i;
         }
-        ans=ans+reverseString(temp);
+        reverse(temp.begin(),temp.end());
+        ans = ans+temp;
         return ans;
     }
 };
