@@ -13,13 +13,11 @@ public:
             }
             else
             {
-                a.clear();
+                a.erase(s[l]);
                 l++;
-                r=l;
             }
             ans=max(ans,r-l);
         }
-        a.clear();
         return ans;
     }
 };
