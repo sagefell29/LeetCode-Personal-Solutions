@@ -19,6 +19,7 @@ public:
             }
             ans=max(ans,r-l);
         }
+        a.clear();
         return ans;
     }
 };
