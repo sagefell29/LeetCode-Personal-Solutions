@@ -14,16 +14,11 @@ public:
     
     bool isHappy(int n) 
     {
-        set<int> a;
         int ans=sumsquare(n);
         while (ans!=1) 
         {
-            if (a.find(ans)==a.end()) 
-            {
-                a.insert(ans);
-                ans=sumsquare(ans);
-            }
-            else return false;
+            if (ans==89) return false;
+            ans=sumsquare(ans);
         }
         return true;
     }
